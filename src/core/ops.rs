@@ -1,3 +1,6 @@
+// Algebraic hierachy from Magma -> AlbeianGroup
+
+
 pub trait Magma: Clone + Eq + Sized {
     fn op(&self, other: &Self) -> Self;
 }

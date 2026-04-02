@@ -1,0 +1,17 @@
+[package]
+name = "alice"
+version = "0.1.0"
+edition = "2024"
+
+[features]
+default = []
+std = []
+
+[dependencies]
+serde = "1.0.228"
+
+[dev-dependencies]
+proptest = "1.11.0"
+
+[profile.test]
+opt-level = 1

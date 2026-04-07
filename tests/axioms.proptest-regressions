@@ -1,0 +1,15 @@
+# Seeds for failure cases proptest has generated in the past. It is
+# automatically read and these particular cases re-run before any
+# novel cases are generated.
+#
+# It is recommended to check this file in to source control so that
+# everyone who runs the test benefits from these saved cases.
+cc 936b66164b44e7fbd7a57e4b97af27a509adb2d35e95d689fb8974d99be1502c # shrinks to a = FiniteF64(7.822475055210399e111), b = FiniteF64(3.494618208219545e-251)
+cc 82a7fb75840a8188c52b0ffa281f91a11babedfc5ed58c31561e5ee83fda388f # shrinks to a = FiniteF64(2.618005378865513e17), b = FiniteF64(5.592109819234534e134), c = FiniteF64(8.415262834357702e135)
+cc 2ced0d5e952833b11e349b5e68ea1368f592bba7175fd691c9e0c01dbcb6c0d1 # shrinks to a = FiniteF64(1.8495226993365313e68), b = FiniteF64(2.537509475722776e90)
+cc 6a326d32e975e999cd89d134990aebe97c0f91e00fb200a1db5532e7fb83edfa # shrinks to a = FiniteF64(1.2186669987326342e121), b = FiniteF64(3.101727457671274e-54), c = FiniteF64(2.4280335498557728e135)
+cc 663c5c8edf0fbed63cdb8c476a05d64f63370f0f7792abe7110fa01e98e4471c # shrinks to a = FiniteF64(2.360688987768792e-103), b = FiniteF64(8.727913750216224e123), c = FiniteF64(4.153052479309055e115)
+cc 2cb5ab0d678f80cb0fc718ec4b82e55e280694ea3abe2e5adc5854bf1416b5f4 # shrinks to a = Rational { numer: 1552611085, denom: 2359552716 }, b = Rational { numer: 1642467510, denom: 3444444919 }
+cc a3dd9069df554e8fe8bc8943764a751c109d7328ee964565d660c893e23a08ef # shrinks to a = Rational { numer: -1733418427, denom: 1503352202 }, b = Rational { numer: -1909266890, denom: 3665053913 }
+cc d499ba5cb9924f68ae5f7d5dc76535d78c3476d414cb658b52863375843fd174 # shrinks to a = FiniteF64(314986729999.97455), b = FiniteF64(5.578643556794578e-300)
+cc 87dd66ec203b52becfa19e29d98e38416403c870ac2c1a2d7ef4daacf154c955 # shrinks to a = FiniteF64(1261.9865189931602), b = FiniteF64(189772525194.05453)

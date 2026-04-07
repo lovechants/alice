@@ -14,5 +14,9 @@ serde = "1.0.228"
 [dev-dependencies]
 proptest = "1.11.0"
 
+[[test]]
+name = "axioms"
+path = "tests/core/axioms.rs"
+ 
 [profile.test]
 opt-level = 1

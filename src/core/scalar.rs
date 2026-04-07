@@ -65,7 +65,7 @@ impl FiniteF64 {
     }
 
     pub fn abs(self) -> Self {
-        Self(self.0.abs())
+        Self(libm::fabs(self.0))
     }
 }
 
@@ -167,16 +167,25 @@ impl Rational {
     }
 
     fn checked_add_inner(self, other: Self) -> Option<Self> {
-        let d = lcm(self.denom, other.denom)?;
-        let lhs = self.numer.checked_mul((d / self.denom) as i64)?;
-        let rhs = other.numer.checked_mul((d / other.denom) as i64)?;
+        let g = gcd(self.denom, other.denom);
+        let self_scale = (other.denom / g) as i64;
+        let other_scale = (self.denom / g) as i64;
+        let lhs = self.numer.checked_mul(self_scale)?;
+        let rhs = other.numer.checked_mul(other_scale)?;
         let n = lhs.checked_add(rhs)?;
+        let d = self.denom.checked_mul(other.denom / g)?;
         Some(Self::new(n, d))
     }
 
     fn checked_mul_inner(self, other: Self) -> Option<Self> {
-        let n = self.numer.checked_mul(other.numer)?;
-        let d = self.denom.checked_mul(other.denom)?;
+        let g1 = gcd(self.numer.unsigned_abs(), other.denom);
+        let g2 = gcd(other.numer.unsigned_abs(), self.denom);
+        let n1 = self.numer / g1 as i64;
+        let n2 = other.numer / g2 as i64;
+        let d1 = self.denom / g2;
+        let d2 = other.denom / g1;
+        let n = n1.checked_mul(n2)?;
+        let d = d1.checked_mul(d2)?;
         Some(Self::new(n, d))
     }
 }
@@ -189,9 +198,9 @@ fn gcd(mut a: u64, mut b: u64) -> u64 {
     if a == 0 { 1 } else { a }
 }
 
-fn lcm(a: u64, b: u64) -> Option<u64> {
-    a.checked_mul(b / gcd(a, b))
-}
+//fn lcm(a: u64, b: u64) -> Option<u64> {
+//    a.checked_mul(b / gcd(a, b))
+//}
 
 impl Magma for Rational {
     fn op(&self, other: &Self) -> Self {
@@ -253,7 +262,7 @@ pub trait Scalar: Field + Ord + core::fmt::Debug {
 
 impl Scalar for FiniteF64 {
     fn abs(&self) -> Self {
-        Self(self.0.abs())
+        Self(libm::fabs(self.0))
     }
 
     fn sqrt(&self) -> Option<Self> {

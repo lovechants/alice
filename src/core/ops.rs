@@ -17,7 +17,7 @@ pub trait Group: Monoid {
     fn inverse(&self) -> Self;
 }
 
-pub trait AlbeianGroup: Group {
+pub trait AbelianGroup: Group {
    fn add(&self, other: &Self) -> Self{
        self.op(other)
    }

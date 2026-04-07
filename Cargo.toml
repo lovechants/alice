@@ -8,6 +8,7 @@ default = []
 std = []
 
 [dependencies]
+libm = "0.2.16"
 serde = "1.0.228"
 
 [dev-dependencies]

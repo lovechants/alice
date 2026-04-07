@@ -1,15 +1,15 @@
 // Ring through field 
 
-use crate::core::ops::AlbeianGroup;
+use crate::core::ops::AbelianGroup;
 
-pub trait Ring: AlbeianGroup {
+pub trait Ring: AbelianGroup {
     fn mul(&self, other: &Self) -> Self;
     fn one() -> Self;
 }
 
-pub trait CommunicativeRing: Ring {}
+pub trait CommutativeRing: Ring {}
 
-pub trait IntegralDomain: CommunicativeRing {
+pub trait IntegralDomain: CommutativeRing {
     fn is_zero(&self) -> bool {
         self == &Self::zero()
     }

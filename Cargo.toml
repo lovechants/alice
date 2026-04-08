@@ -16,7 +16,11 @@ proptest = "1.11.0"
 
 [[test]]
 name = "axioms"
-path = "tests/core/axioms.rs"
+path = "tests/axioms.rs"
  
+[[test]]
+name = "space_axioms"
+path = "tests/space_axioms.rs"
+
 [profile.test]
 opt-level = 1

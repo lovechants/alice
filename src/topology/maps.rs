@@ -52,6 +52,7 @@ where
     where
         X::Point: Ord,
         Y::Point: Ord,
+        Y: OpenSetsIter,
     {
         for open in codomain.open_sets_iter() {
             let pre = self.preimage(domain_points, &open);

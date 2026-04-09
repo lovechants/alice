@@ -22,5 +22,8 @@ path = "tests/axioms.rs"
 name = "space_axioms"
 path = "tests/space_axioms.rs"
 
+[[test]]
+name = "lie_algebra"
+path = "tests/lie_algebra_test.rs"
 [profile.test]
 opt-level = 1

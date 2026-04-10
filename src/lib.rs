@@ -3,3 +3,4 @@ extern crate alloc;
 pub mod core;
 pub mod topology;
 pub mod algebra;
+pub mod maps;

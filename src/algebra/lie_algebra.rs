@@ -1,6 +1,5 @@
 use crate::core::scalar::Scalar;
 use crate::core::module::VectorSpace;
-use crate::core::ops::AbelianGroup;
 
 pub trait LieAlgebra<F: Scalar>: VectorSpace<F> {
     fn bracket(&self, other: &Self) -> Self;

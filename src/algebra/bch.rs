@@ -1,6 +1,4 @@
 use crate::core::scalar::Scalar;
-use crate::core::ring::Field;
-use crate::core::ops::AbelianGroup;
 use crate::algebra::lie_algebra::LieAlgebra;
 
 /// Computes Z such that exp(X)exp(Y) = exp(Z) using the

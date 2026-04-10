@@ -8,7 +8,9 @@ default = []
 std = []
 
 [dependencies]
+faer = "0.24.0"
 libm = "0.2.16"
+num-complex = "0.4.6"
 serde = "1.0.228"
 
 [dev-dependencies]
@@ -25,5 +27,10 @@ path = "tests/space_axioms.rs"
 [[test]]
 name = "lie_algebra"
 path = "tests/lie_algebra_test.rs"
+
+[[test]]
+name = "exp_log_tests"
+path = "tests/exp_log_test.rs"
+
 [profile.test]
 opt-level = 1

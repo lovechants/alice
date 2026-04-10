@@ -4,3 +4,4 @@ pub mod core;
 pub mod topology;
 pub mod algebra;
 pub mod maps;
+pub mod groups;

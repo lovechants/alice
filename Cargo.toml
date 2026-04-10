@@ -32,5 +32,9 @@ path = "tests/lie_algebra_test.rs"
 name = "exp_log_tests"
 path = "tests/exp_log_test.rs"
 
+[[test]]
+name = "group_tests"
+path = "tests/group_tests.rs"
+
 [profile.test]
 opt-level = 1

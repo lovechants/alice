@@ -1,6 +1,6 @@
-use alice::core::scalar::{FiniteF64, Scalar};
+use alice::core::scalar::FiniteF64;
 use alice::core::ops::{AbelianGroup, Group, Magma, Monoid, Semigroup};
-use alice::core::ring::{CommutativeRing, Field, IntegralDomain, Ring};
+use alice::core::ring::Ring;
 use alice::core::module::{Module, VectorSpace};
 use alice::algebra::lie_algebra::LieAlgebra;
 use alice::algebra::bch::{

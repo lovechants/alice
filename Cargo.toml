@@ -26,7 +26,7 @@ path = "tests/space_axioms.rs"
 
 [[test]]
 name = "lie_algebra"
-path = "tests/lie_algebra_test.rs"
+path = "tests/lie_algebra_tests.rs"
 
 [[test]]
 name = "exp_log_tests"

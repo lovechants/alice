@@ -8,7 +8,7 @@ use alice::topology::smooth::{
     EuclideanManifold, SmoothManifold, compose_smooth_maps, verify_transition_smoothness,
     SmoothMap,
 };
-use alice::core::scalar::{FiniteF64, Scalar};
+use alice::core::scalar::FiniteF64;
 
 use alloc::collections::BTreeSet;
 use alloc::vec;
@@ -337,9 +337,9 @@ mod dim_tests {
 mod manifold_tests {
     use super::*;
 
-    fn f64(v: f64) -> FiniteF64 {
-        FiniteF64::new(v).unwrap()
-    }
+    //fn f64(v: f64) -> FiniteF64 {
+    //    FiniteF64::new(v).unwrap()
+    //}
 
     fn point(coords: &[f64]) -> Point<FiniteF64> {
         Point::new(coords.iter().map(|&v| FiniteF64::new(v).unwrap()).collect())
@@ -494,7 +494,7 @@ mod manifold_tests {
         fn smooth_map_differential_linearity(
             ax in -1e3f64..1e3f64,
             bx in -1e3f64..1e3f64,
-            s in -1e3f64..1e3f64,
+            _s in -1e3f64..1e3f64,
         ) {
             let double: SmoothMap<FiniteF64> = SmoothMap::new(
                 1, 1,

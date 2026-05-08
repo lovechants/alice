@@ -10,7 +10,7 @@ alice = { package = "alice-math", version = "0.1.0" }
 
 ## What it is
 
-alice builds the mathematical foundations needed for Lie group simulation and Riemannian optimization from the ground up in Rust. The algebraic hierarchy starts at `Magma` and builds to `Field`. The topology layer encodes open set axioms, manifolds, and smooth structure. The groups module provides concrete matrix Lie groups with correct constraint enforcement and `no_std` compatibility.
+Alice builds the mathematical foundations needed for Lie group simulation and Riemannian optimizationfrom the ground up in Rust. The algebraic hierarchy starts at `Magma` and builds to `Field`. The topology layer encodes open set axioms, manifolds, and smooth structure. The groups module provides concrete matrix Lie groups with correct constraint enforcement and `no_std` compatibility.
 
 ## Modules
 

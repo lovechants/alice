@@ -1,11 +1,21 @@
 [package]
-name = "alice"
+name = "alice-math"
 version = "0.1.0"
 edition = "2024"
-
+description = "A topology and algebra library from first principles"
+license = "MIT"
+repository = "https://github.com/lovechants/alice"
+keywords = ["topology", "algebra", "lie-groups", "mathematics", "manifold"]
+categories = ["science", "mathematics", "no-std"]
+readme = "readme.md"
+ 
+[lib]
+name = "alice"
+ 
 [features]
 default = []
 std = []
+ 
 
 [dependencies]
 faer = "0.24.0"
